@@ -1,0 +1,29 @@
+[
+  {
+    "name": "org.geolatte.geom.codec.PostgisWkbDecoder",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.geolatte.geom.codec.PostgisWkbEncoder",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.geolatte.geom.codec.PostgisWktEncoder",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  }
+]
