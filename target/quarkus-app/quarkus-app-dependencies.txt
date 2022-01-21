@@ -54,8 +54,6 @@ io.quarkus:quarkus-agroal::jar:1.13.4.Final
 io.quarkus:quarkus-arc::jar:1.13.4.Final
 io.quarkus:quarkus-bootstrap-runner::jar:1.13.4.Final
 io.quarkus:quarkus-caffeine::jar:1.13.4.Final
-io.quarkus:quarkus-container-image-docker::jar:1.13.4.Final
-io.quarkus:quarkus-container-image::jar:1.13.4.Final
 io.quarkus:quarkus-core::jar:1.13.4.Final
 io.quarkus:quarkus-credentials::jar:1.13.4.Final
 io.quarkus:quarkus-datasource-common::jar:1.13.4.Final

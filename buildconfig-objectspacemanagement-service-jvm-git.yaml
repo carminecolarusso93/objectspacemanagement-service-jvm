@@ -1,0 +1,109 @@
+﻿kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  annotations:
+    app.openshift.io/vcs-ref: ''
+    app.openshift.io/vcs-uri: >-
+      https://github.com/carminecolarusso93/objectspacemanagement-service-jvm.git
+    openshift.io/generated-by: OpenShiftWebConsole
+  resourceVersion: '3730260'
+  name: objectspacemanagement-service-jvm-git
+  uid: b3a268b0-70be-4b8f-ad8d-21e93fded6df
+  creationTimestamp: '2021-12-01T10:58:50Z'
+  generation: 6
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: build.openshift.io/v1
+      time: '2021-12-01T11:09:59Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:app.openshift.io/vcs-ref': {}
+            'f:app.openshift.io/vcs-uri': {}
+            'f:openshift.io/generated-by': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:app.kubernetes.io/component': {}
+            'f:app.kubernetes.io/instance': {}
+            'f:app.kubernetes.io/name': {}
+            'f:app.kubernetes.io/part-of': {}
+            'f:app.openshift.io/runtime': {}
+            'f:app.openshift.io/runtime-version': {}
+        'f:spec':
+          'f:output':
+            'f:to':
+              .: {}
+              'f:kind': {}
+              'f:name': {}
+          'f:runPolicy': {}
+          'f:source':
+            'f:contextDir': {}
+            'f:git':
+              .: {}
+              'f:uri': {}
+            'f:type': {}
+          'f:strategy':
+            'f:dockerStrategy':
+              .: {}
+              'f:from':
+                .: {}
+                'f:kind': {}
+                'f:name': {}
+            'f:type': {}
+          'f:triggers': {}
+    - manager: openshift-apiserver
+      operation: Update
+      apiVersion: build.openshift.io/v1
+      time: '2021-12-01T11:10:05Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:lastVersion': {}
+  namespace: vasari
+  labels:
+    app: objectspacemanagement-service-jvm-git
+    app.kubernetes.io/component: objectspacemanagement-service-jvm-git
+    app.kubernetes.io/instance: objectspacemanagement-service-jvm-git
+    app.kubernetes.io/name: objectspacemanagement-service-jvm-git
+    app.kubernetes.io/part-of: objectspacemanagement-service-jvm-git-app
+    app.openshift.io/runtime: java
+    app.openshift.io/runtime-version: openjdk-11-ubi8
+spec:
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'objectspacemanagement-service-jvm-git:latest'
+  resources: {}
+  successfulBuildsHistoryLimit: 5
+  failedBuildsHistoryLimit: 5
+  strategy:
+    type: Docker
+    dockerStrategy:
+      from:
+        kind: DockerImage
+        name: 'registry.access.redhat.com/ubi8/ubi-minimal:8.3'
+  postCommit: {}
+  source:
+    type: Git
+    git:
+      uri: >-
+        https://github.com/carminecolarusso93/objectspacemanagement-service-jvm.git
+    contextDir: /
+  triggers:
+    - type: Generic
+      generic:
+        secretReference:
+          name: objectspacemanagement-service-jvm-git-generic-webhook-secret
+    - type: GitHub
+      github:
+        secretReference:
+          name: objectspacemanagement-service-jvm-git-github-webhook-secret
+    - type: ConfigChange
+  runPolicy: Serial
+status:
+  lastVersion: 4
