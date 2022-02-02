@@ -102,13 +102,16 @@ public class SpacesService {
 
     //Digital models
 
-    public List<DigitalModelView> getDigitalModels(long id) {
+    public List<DigitalModelView> getDigitalModels(long id, String tag) {
         var criteriaBuilder = cbf.create(em, Long.class)
                 .from(Space.class, "space")
                 .where("space.id").eq(id)
                 .select("space.digitalModels.id");
         var returnCriteriaBuilder = cbf.create(em, DigitalModel.class)
                 .where("id").in(criteriaBuilder.getResultList());
+        if (tag != null) {
+            returnCriteriaBuilder.where("tag").eq(tag);
+        }
         return evm.applySetting(EntityViewSetting.create(DigitalModelView.class), returnCriteriaBuilder)
                 .getResultList();
     }

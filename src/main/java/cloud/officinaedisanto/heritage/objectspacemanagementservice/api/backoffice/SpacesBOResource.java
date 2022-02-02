@@ -65,8 +65,8 @@ public class SpacesBOResource {
 
     @GET
     @Path("/{id}/digitalmodels")
-    public List<DigitalModelView> getDigitalModels(@PathParam("id") long id) {
-        return spacesService.getDigitalModels(id);
+    public List<DigitalModelView> getDigitalModels(@PathParam("id") long id, @QueryParam("tag") String tag) {
+        return spacesService.getDigitalModels(id, tag);
     }
 
     @POST

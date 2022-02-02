@@ -16,6 +16,8 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class LocationsAppResource {
 
+    //Distanza in metri
+
     private final LocationsService locationsService;
 
     public LocationsAppResource(LocationsService locationsService) {
