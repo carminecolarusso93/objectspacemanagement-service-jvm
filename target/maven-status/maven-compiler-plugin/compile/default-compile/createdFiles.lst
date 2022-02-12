@@ -8,8 +8,8 @@ cloud/officinaedisanto/heritage/objectspacemanagementservice/api/backoffice/Loca
 cloud/officinaedisanto/heritage/objectspacemanagementservice/api/app/LocationsAppResource.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/DigitalModelUpdateView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/SpaceView.class
-cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/BeaconReferenceUpdateView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/references/QRCodeReference.class
+cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/BeaconReferenceUpdateView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/services/LocalizableEntitiesService.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/references/GeospatialReference.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/QRCodeReferenceView.class
@@ -25,8 +25,8 @@ cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/Loca
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/GeospatialReferenceView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/BeaconReferenceView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/references/CartesianReference.class
-cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/CartesianReferenceUpdateView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/references/LocationReference.class
+cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/CartesianReferenceUpdateView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/services/SpacesService.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/api/backoffice/SpacesBOResource.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/DigitalModelView.class

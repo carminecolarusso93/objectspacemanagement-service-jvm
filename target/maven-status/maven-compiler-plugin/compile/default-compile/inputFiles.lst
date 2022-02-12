@@ -13,8 +13,8 @@
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/references/LocationReference.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/references/GeospatialReference.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/DigitalModelView.java
-/home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/SpaceUpdateView.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/GeospatialReferenceView.java
+/home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/SpaceUpdateView.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/LocationReferenceView.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/LocationReferenceUpdateView.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/config/GeoJsonSerializationConfig.java
