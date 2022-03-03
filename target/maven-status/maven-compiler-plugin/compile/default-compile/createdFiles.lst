@@ -21,7 +21,9 @@ cloud/officinaedisanto/heritage/objectspacemanagementservice/config/GeoJsonSeria
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/Space.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/LocationReferenceUpdateView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/QRCodeReferenceUpdateView.class
+cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/app/SpaceAppView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/LocalizableEntityView.class
+cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/app/LocalizableEntityAppView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/GeospatialReferenceView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/BeaconReferenceView.class
 cloud/officinaedisanto/heritage/objectspacemanagementservice/model/references/CartesianReference.class

@@ -2,6 +2,7 @@ package cloud.officinaedisanto.heritage.objectspacemanagementservice.services;
 
 import cloud.officinaedisanto.heritage.objectspacemanagementservice.model.LocalizableEntity;
 import cloud.officinaedisanto.heritage.objectspacemanagementservice.model.references.LocationReference;
+import cloud.officinaedisanto.heritage.objectspacemanagementservice.model.views.app.LocalizableEntityAppView;
 import cloud.officinaedisanto.heritage.objectspacemanagementservice.model.views.bo.LocalizableEntityView;
 import com.blazebit.persistence.CriteriaBuilderFactory;
 import com.blazebit.persistence.view.EntityViewManager;
@@ -30,26 +31,27 @@ public class LocationsService {
         this.evm = evm;
     }
 
-    public List<LocalizableEntityView> localize(Integer major, Integer minor, Double lat, Double lng, Integer distance,
-                                                String qrCode) {
+    public List<LocalizableEntityAppView> localize(String uuid, Integer major, Integer minor, Double lat, Double lng,
+                                                   Integer distance, String qrCode) {
         var criteriaBuilder = cbf.create(em, LocalizableEntity.class);
-        if (major != null && minor != null) {
+        if (uuid != null && major != null && minor != null) {
             criteriaBuilder
-                    .where("TREAT(locationReferences as BeaconLocationReference).major").eq(major)
-                    .where("TREAT(locationReferences as BeaconLocationReference).minor").eq(minor);
+                    .where("TREAT(locationReferences as BeaconReference).uuid").eq(uuid)
+                    .where("TREAT(locationReferences as BeaconReference).major").eq(major)
+                    .where("TREAT(locationReferences as BeaconReference).minor").eq(minor);
         }
         if (lat != null && lng != null && distance != null) {
             criteriaBuilder
-                    .setWhereExpression("distance(TREAT(locationReferences as GeoLocationReference).centerPoint, :point) " +
+                    .setWhereExpression("distance(TREAT(locationReferences as GeospatialReference).centerPoint, :point) " +
                             "<= :distance")
                     .setParameter("point", point(WGS84, g(lng, lat)))
-                    .setParameter("distance", distance);
+                    .setParameter("distance", (double) distance);
         }
         if (qrCode != null && !qrCode.isBlank()) {
             criteriaBuilder
-                    .where("TREAT(locationReferences as QRCodeLocationReference).qrCode").eq(qrCode);
+                    .where("TREAT(locationReferences as QRCodeReference).qrCode").eq(qrCode);
         }
-        return evm.applySetting(EntityViewSetting.create(LocalizableEntityView.class), criteriaBuilder)
+        return evm.applySetting(EntityViewSetting.create(LocalizableEntityAppView.class), criteriaBuilder)
                 .getResultList();
     }
 

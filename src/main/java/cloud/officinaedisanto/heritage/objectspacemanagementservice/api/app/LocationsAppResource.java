@@ -1,7 +1,7 @@
 package cloud.officinaedisanto.heritage.objectspacemanagementservice.api.app;
 
 import cloud.officinaedisanto.heritage.objectspacemanagementservice.model.references.LocationReference;
-import cloud.officinaedisanto.heritage.objectspacemanagementservice.model.views.bo.LocalizableEntityView;
+import cloud.officinaedisanto.heritage.objectspacemanagementservice.model.views.app.LocalizableEntityAppView;
 import cloud.officinaedisanto.heritage.objectspacemanagementservice.services.LocationsService;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
@@ -25,13 +25,14 @@ public class LocationsAppResource {
     }
 
     @GET
-    public List<LocalizableEntityView> localize(@QueryParam("major") Integer major,
-                                                @QueryParam("minor") Integer minor,
-                                                @QueryParam("lat") Double lat,
-                                                @QueryParam("lng") Double lng,
-                                                @QueryParam("distance") Integer distance,
-                                                @QueryParam("qrCode") String qrCode) {
-        return locationsService.localize(major, minor, lat, lng, distance, qrCode);
+    public List<LocalizableEntityAppView> localize(@QueryParam("uuid") String uuid,
+                                                   @QueryParam("major") Integer major,
+                                                   @QueryParam("minor") Integer minor,
+                                                   @QueryParam("lat") Double lat,
+                                                   @QueryParam("lng") Double lng,
+                                                   @QueryParam("distance") Integer distance,
+                                                   @QueryParam("qrCode") String qrCode) {
+        return locationsService.localize(uuid, major, minor, lat, lng, distance, qrCode);
     }
 
     @PUT

@@ -63,22 +63,23 @@ public class SpacesService {
                                   Integer distance, String qrCode, String entityId) {
         var criteriaBuilder = cbf.create(em, Space.class);
         if (uuid != null && major != null && minor != null) {
-            criteriaBuilder.where("TREAT(locationReferences as BeaconLocationReference).uuid")
-                    .eq(uuid).where("TREAT(locationReferences as BeaconLocationReference).major").eq(major)
-                    .where("TREAT(locationReferences as BeaconLocationReference).minor").eq(minor);
+            criteriaBuilder
+                    .where("TREAT(locationReferences as BeaconReference).uuid").eq(uuid)
+                    .where("TREAT(locationReferences as BeaconReference).major").eq(major)
+                    .where("TREAT(locationReferences as BeaconReference).minor").eq(minor);
         }
         if (x != null && y != null && distance != null) {
             criteriaBuilder
-                    .setWhereExpression("distance(TREAT(locationReferences as CartesianLocationReference).centerPoint, :point) " + "<= :distance")
+                    .setWhereExpression("distance(TREAT(locationReferences as CartesianReference).centerPoint, :point) " + "<= :distance")
                     .setParameter("point", point(PROJECTED_2D_METER, c(x, y))).setParameter("distance", distance);
         }
         if (lat != null && lng != null && distance != null) {
             criteriaBuilder
-                    .setWhereExpression("distance(TREAT(locationReferences as GeoLocationReference).centerPoint, :point) " + "<= :distance")
-                    .setParameter("point", point(WGS84, g(lng, lat))).setParameter("distance", distance);
+                    .setWhereExpression("distance(TREAT(locationReferences as GeospatialReference).centerPoint, :point) " + "<= :distance")
+                    .setParameter("point", point(WGS84, g(lng, lat))).setParameter("distance", (double) distance);
         }
         if (qrCode != null && !qrCode.isBlank()) {
-            criteriaBuilder.where("TREAT(locationReferences as QRCodeLocationReference).qrCode").eq(qrCode);
+            criteriaBuilder.where("TREAT(locationReferences as QRCodeReference).qrCode").eq(qrCode);
         }
         if (entityId != null && !entityId.isBlank()) {
             criteriaBuilder.where("entityId").eq(entityId);

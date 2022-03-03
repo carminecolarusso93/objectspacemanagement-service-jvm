@@ -21,9 +21,11 @@
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/GeospatialReferenceUpdateView.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/LocalizableEntity.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/references/CartesianReference.java
+/home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/app/SpaceAppView.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/services/SpacesService.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/LocalizableEntityView.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/updatable/LocalizableEntityUpdateView.java
+/home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/app/LocalizableEntityAppView.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/services/LocationsService.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/api/app/LocationsAppResource.java
 /home/colarusso/Documents/GitRepository/vasari/objectspacemanagement-service-jvm/src/main/java/cloud/officinaedisanto/heritage/objectspacemanagementservice/model/views/bo/BeaconReferenceView.java
